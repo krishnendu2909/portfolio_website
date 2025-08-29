@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Krishnendu CJ - Portfolio
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, featuring dynamic theme switching, smooth animations, and interactive components.
 
-First, run the development server:
+![Portfolio Preview](https://img.shields.io/badge/Next.js-15.5.2-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC?style=for-the-badge&logo=tailwind-css)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.0-FF0055?style=for-the-badge&logo=framer)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+### 🎨 **Dynamic Theme System**
+- **4 Beautiful Themes**: Lava (default), Ocean, Forest, and Cosmic
+- **Smooth Transitions**: Seamless color changes across all components
+- **Theme Persistence**: Remembers your preferred theme
+
+### 🎭 **Interactive Components**
+- **Animated Avatar**: Theme-aware avatar with glow effects
+- **Floating Particles**: Dynamic background animations
+- **Smooth Scrolling**: Active section highlighting in navigation
+- **Project Search**: Real-time filtering of projects
+- **Contact Form**: Fully functional with validation and feedback
+
+### 📱 **Responsive Design**
+- **Mobile-First**: Optimized for all screen sizes
+- **Touch Gestures**: Swipe navigation for project cards
+- **Progressive Loading**: Skeleton loaders and lazy images
+- **PWA Ready**: Offline support and installable
+
+### 🚀 **Performance Optimized**
+- **Next.js 15**: Latest features and optimizations
+- **Image Optimization**: Lazy loading and responsive images
+- **Code Splitting**: Optimized bundle sizes
+- **SEO Friendly**: Meta tags and Open Graph support
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.5.2
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **Fonts**: Orbitron, Space Grotesk (Google Fonts)
+- **Form Handling**: Web3Forms API
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/krishnendu2909/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📁 Project Structure
+
+```
+portfolio/
+├── public/                 # Static assets
+│   ├── avatar.png         # Profile picture
+│   ├── *.pdf              # Certificates and resume
+│   └── icons/             # PWA icons
+├── src/
+│   ├── app/               # Next.js app directory
+│   │   ├── globals.css    # Global styles and theme variables
+│   │   ├── layout.tsx     # Root layout
+│   │   └── page.tsx       # Home page
+│   ├── components/        # React components
+│   │   ├── Hero.tsx       # Landing section
+│   │   ├── About.tsx      # About section
+│   │   ├── Projects.tsx   # Projects showcase
+│   │   ├── Skills.tsx     # Skills section
+│   │   ├── Experience.tsx # Education & certifications
+│   │   ├── Contact.tsx    # Contact form
+│   │   └── ...           # Other components
+│   ├── contexts/          # React contexts
+│   │   └── ThemeContext.tsx # Theme management
+│   └── hooks/             # Custom hooks
+│       └── useActiveSection.ts # Section tracking
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Themes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The portfolio includes 4 carefully crafted themes:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Theme | Primary | Secondary | Accent | Description |
+|-------|---------|-----------|---------|-------------|
+| 🔥 **Lava** | `#ff6b35` | `#ff8e53` | `#ffab73` | Warm orange/red tones |
+| 🌊 **Ocean** | `#0ea5e9` | `#38bdf8` | `#7dd3fc` | Cool blue tones |
+| 🌲 **Forest** | `#22c55e` | `#4ade80` | `#86efac` | Natural green tones |
+| 🌌 **Cosmic** | `#8b5cf6` | `#a78bfa` | `#c4b5fd` | Mystical purple tones |
 
-## Learn More
+## 📧 Contact Form Setup
 
-To learn more about Next.js, take a look at the following resources:
+The contact form uses Web3Forms for handling submissions. To set up:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Get your access key from [Web3Forms](https://web3forms.com)
+2. Replace the access key in `src/components/ContactForm.tsx`
+3. For production, use environment variables:
+   ```env
+   NEXT_PUBLIC_WEB3FORMS_KEY=your_access_key_here
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
 
-## Deploy on Vercel
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Deploy with one click
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Other Platforms
+- **Netlify**: Drag and drop the `out` folder after `npm run build`
+- **GitHub Pages**: Use `next export` for static deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📱 PWA Features
+
+The portfolio includes Progressive Web App capabilities:
+- **Offline Support**: Service worker for caching
+- **Installable**: Add to home screen on mobile
+- **App-like Experience**: Standalone display mode
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👨‍💻 Author
+
+**Krishnendu CJ**
+- Portfolio: [krishnendu-portfolio.vercel.app](https://krishnendu-portfolio.vercel.app)
+- GitHub: [@krishnendu2909](https://github.com/krishnendu2909)
+- LinkedIn: [Krishnendu CJ](https://linkedin.com/in/krishnendu-cj)
+
+---
+
+⭐ **Star this repository if you found it helpful!**
