@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Orbitron, Space_Grotesk } from "next/font/google";
+import { Orbitron, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from '../contexts/ThemeContext';
 import ThemeToggle from '../components/ThemeToggle';
@@ -7,7 +7,6 @@ import ScrollProgress from '../components/ScrollProgress';
 import ThemeTransition from '../components/ThemeTransition';
 import ServiceWorker from '../components/ServiceWorker';
 
-const inter = Inter({ subsets: ["latin"] });
 const orbitron = Orbitron({ 
   subsets: ["latin"],
   variable: '--font-orbitron'

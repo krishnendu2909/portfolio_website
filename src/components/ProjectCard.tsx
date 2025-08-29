@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { motion, PanInfo } from "framer-motion";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 interface Project {
   id: number;
@@ -19,7 +18,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, index, onSelect }: ProjectCardProps) {
   const [isDragging, setIsDragging] = useState(false);
 
-  const handleDragEnd = (event: any, info: PanInfo) => {
+  const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     setIsDragging(false);
     
     // Swipe left/right to navigate (mobile gesture)
@@ -58,7 +57,7 @@ export default function ProjectCard({ project, index, onSelect }: ProjectCardPro
       
       {/* Tech Stack */}
       <div className="flex flex-wrap gap-2 mb-4">
-        {project.techStack.slice(0, 4).map((tech) => (
+        {project.techStack.slice(0, 4).map((tech: { name: string; icon: React.ReactNode; color: string }) => (
           <div
             key={tech.name}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 glow-border-hover font-space-grotesk"

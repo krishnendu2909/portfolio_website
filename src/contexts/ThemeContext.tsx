@@ -78,15 +78,17 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('portfolio-theme', theme);
     
     // Update CSS custom properties
-    const root = document.documentElement;
-    const currentTheme = themes[theme];
+    if (typeof document !== 'undefined') {
+      const root = document.documentElement;
+      const currentTheme = themes[theme];
     
-    root.style.setProperty('--theme-primary', currentTheme.primary);
-    root.style.setProperty('--theme-secondary', currentTheme.secondary);
-    root.style.setProperty('--theme-accent', currentTheme.accent);
-    root.style.setProperty('--theme-background', currentTheme.background);
-    root.style.setProperty('--theme-text', currentTheme.text);
-    root.style.setProperty('--theme-border', currentTheme.border);
+      root.style.setProperty('--theme-primary', currentTheme.primary);
+      root.style.setProperty('--theme-secondary', currentTheme.secondary);
+      root.style.setProperty('--theme-accent', currentTheme.accent);
+      root.style.setProperty('--theme-background', currentTheme.background);
+      root.style.setProperty('--theme-text', currentTheme.text);
+      root.style.setProperty('--theme-border', currentTheme.border);
+    }
   }, [theme]);
 
   return (

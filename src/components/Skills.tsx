@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 import { 
   FaPython, FaReact, FaNodeJs, FaAws, FaFigma, FaGitAlt, FaDocker,
-  FaJs, FaHtml5, FaCss3Alt, FaDatabase, FaCloud, FaCode, FaMobile
+  FaJs, FaHtml5, FaCss3Alt, FaDatabase, FaCode, FaServer, FaTools
 } from "react-icons/fa";
 import { 
   SiTypescript, SiMongodb, SiPostgresql, SiTailwindcss, SiNextdotjs,
-  SiExpress, SiPython, SiCplusplus, SiKubernetes, SiTensorflow
+  SiExpress, SiCplusplus, SiKubernetes, SiTensorflow
 } from "react-icons/si";
 
 interface Skill {

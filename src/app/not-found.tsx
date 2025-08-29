@@ -34,8 +34,8 @@ export default function NotFound() {
           <p className="text-xl text-gray-300 mb-2">
             Looks like this page drifted into the asteroid belt!
           </p>
-          <p className="text-gray-400">
-            The page you're looking for doesn't exist or has been moved.
+          <p className="text-xl mb-8 text-themeSecondary">
+            Oops! The page you&apos;re looking for doesn&apos;t exist.
           </p>
         </motion.div>
 
@@ -75,7 +75,7 @@ export default function NotFound() {
 
         {/* Floating Asteroids Animation */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(8)].map((_, i) => (
+          {typeof window !== 'undefined' && [...Array(8)].map((_, i) => (
             <motion.div
               key={i}
               initial={{ 

@@ -27,6 +27,7 @@ export default function Contact() {
         setSubmitStatus('error');
       }
     } catch (error) {
+      console.error('Form submission error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -78,12 +79,21 @@ export default function Contact() {
               name="message"
               required
               rows={5}
+              defaultValue="Tell me about your project, ideas, or just say hi! 🚀"
               className="w-full p-4 rounded-lg bg-gray-900 border-2 border-gray-700 text-white placeholder-gray-400 focus:border-themePrimary focus:outline-none transition-colors resize-vertical"
-              placeholder="Tell me about your project, ideas, or just say hi! 🚀"
-            ></textarea>
+            />
           </div>
 
-          <button type="submit" className="py-3 rounded font-bold transition" style={{ backgroundColor: 'var(--theme-primary)' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--theme-secondary)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--theme-primary)'}>Send Message</button>
+          <button 
+            type="submit" 
+            disabled={isSubmitting}
+            className="py-3 rounded font-bold transition" 
+            style={{ backgroundColor: 'var(--theme-primary)' }} 
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--theme-secondary)'} 
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--theme-primary)'}
+          >
+            {isSubmitting ? 'Sending...' : 'Send Message'}
+          </button>
 
           {/* Status Messages */}
           {submitStatus === 'success' && (
@@ -95,7 +105,7 @@ export default function Contact() {
                 color: 'var(--theme-primary)'
               }}
             >
-              ✅ Message sent successfully! I'll get back to you soon.
+              ✅ Message sent successfully! I&apos;ll get back to you soon.
             </div>
           )}
           

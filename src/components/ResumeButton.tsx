@@ -1,7 +1,7 @@
 // components/ResumeButton.tsx
 "use client";
 import { motion } from "framer-motion";
-import { FaDownload, FaFileAlt, FaRocket } from "react-icons/fa";
+import { FaRocket, FaFileAlt } from "react-icons/fa";
 
 export default function ResumeButton() {
   return (

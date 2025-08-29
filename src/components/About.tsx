@@ -49,9 +49,8 @@ export default function About() {
                 <div className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
                     Hey there! I'm <span className="text-themePrimary font-semibold">Krishnendu CJ</span>, 
-                    a passionate B.Tech Computer Science student at VIT with an insatiable curiosity for technology 
-                    and innovation. My journey in tech started with a simple "Hello World" and has evolved into 
-                    creating complex systems that solve real-world problems.
+                    a passionate Full Stack Developer with expertise in modern web technologies. 
+                    I love creating &quot;pixel-perfect&quot; applications that deliver exceptional user experiences.
                   </p>
                   
                   <p>
@@ -63,9 +62,9 @@ export default function About() {
                   </p>
                   
                   <p>
-                    When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-                    projects, or brainstorming the next big idea. I believe in continuous learning and pushing 
-                    the boundaries of what's possible with technology.
+                    When I&apos;m not coding, you&apos;ll find me exploring the latest tech trends, 
+                    contributing to open-source projects, or brainstorming the next big idea. 
+                    I believe in continuous learning and love sharing knowledge with the developer community.
                   </p>
                 </div>
               </div>

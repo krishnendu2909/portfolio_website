@@ -1,9 +1,9 @@
 // components/Experience.tsx
 "use client";
 import { motion } from "framer-motion";
-import { FaGraduationCap, FaAward, FaCode, FaCalendarAlt } from "react-icons/fa";
+import { FaGraduationCap, FaCertificate, FaAward, FaCalendarAlt } from "react-icons/fa";
 
-interface TimelineItem {
+interface ExperienceItem {
   id: number;
   title: string;
   institution: string;

@@ -78,8 +78,7 @@ export default function LoadingScreen() {
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
               {[...Array(12)].map((_, i) => {
                 // Generate consistent values for SSR
-                const seedX = (i * 137.5) % 100; // Pseudo-random but consistent
-                const seedY = (i * 73.2) % 100;
+                const seedX = Math.random() * 1000; // Pseudo-random but consistent
                 const seedDelay = (i * 0.3) % 2;
                 const seedDuration = 3 + (i * 0.2) % 2;
                 

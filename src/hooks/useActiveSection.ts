@@ -21,21 +21,23 @@ export const useActiveSection = () => {
       }
     );
 
-    sections.forEach((section) => {
-      const element = document.getElementById(section);
-      if (element) {
-        observer.observe(element);
-      }
-    });
-
-    return () => {
+    if (typeof document !== 'undefined') {
       sections.forEach((section) => {
         const element = document.getElementById(section);
         if (element) {
-          observer.unobserve(element);
+          observer.observe(element);
         }
       });
-    };
+
+      return () => {
+        sections.forEach((section) => {
+          const element = document.getElementById(section);
+          if (element) {
+            observer.unobserve(element);
+          }
+        });
+      };
+    }
   }, []);
 
   return activeSection;

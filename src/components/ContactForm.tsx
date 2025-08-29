@@ -55,6 +55,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
         setFormData({ name: '', email: '', message: '' });
       }
     } catch (error) {
+      console.error('Form submission error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useTheme } from '../contexts/ThemeContext';
 
 export default function ThemeTransition() {
   useEffect(() => {

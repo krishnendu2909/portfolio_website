@@ -1,8 +1,8 @@
 // components/Projects.tsx
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useMemo } from "react";
-import { FaExternalLinkAlt, FaGithub, FaTimes, FaCloud } from "react-icons/fa";
+import { FaExternalLinkAlt, FaCloud, FaTimes } from "react-icons/fa";
 import ProjectSearch from "./ProjectSearch";
 import { 
   SiReact, SiNodedotjs, SiPython, SiMongodb, SiTensorflow, 
