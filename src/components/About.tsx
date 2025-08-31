@@ -48,15 +48,15 @@ export default function About() {
                 
                 <div className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
-                    Hey there! I'm <span className="text-themePrimary font-semibold">Krishnendu CJ</span>, 
+                    Hey there! I&apos;m <span className="text-themePrimary font-semibold">Krishnendu CJ</span>, 
                     a passionate Full Stack Developer with expertise in modern web technologies. 
                     I love creating &quot;pixel-perfect&quot; applications that deliver exceptional user experiences.
                   </p>
                   
                   <p>
-                    I'm fascinated by the intersection of <span className="text-themeSecondary font-medium">AI/ML</span>, 
+                    I&apos;m fascinated by the intersection of <span className="text-themeSecondary font-medium">AI/ML</span>, 
                     <span className="text-themeSecondary font-medium"> full-stack development</span>, and 
-                    <span className="text-themeSecondary font-medium"> cloud technologies</span>. Whether it's building 
+                    <span className="text-themeSecondary font-medium"> cloud technologies</span>. Whether it&apos;s building 
                     intelligent recommendation systems or crafting seamless user experiences, I love turning 
                     ideas into reality through code.
                   </p>

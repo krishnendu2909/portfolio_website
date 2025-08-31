@@ -47,7 +47,7 @@ export default function Contact() {
           📬 Get In Touch
         </motion.h2>
         <p className="text-gray-300 mb-10 max-w-2xl mx-auto">
-          Ready to collaborate on something amazing? Drop me a message and let's create something stellar together!
+          Ready to collaborate on something amazing? Drop me a message and let&apos;s create something stellar together!
         </p>
 
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto flex flex-col gap-6">

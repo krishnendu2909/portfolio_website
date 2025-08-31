@@ -1,18 +1,8 @@
 // components/Experience.tsx
 "use client";
 import { motion } from "framer-motion";
-import { FaGraduationCap, FaCertificate, FaAward, FaCalendarAlt } from "react-icons/fa";
+import { FaGraduationCap, FaAward, FaCalendarAlt } from "react-icons/fa";
 
-interface ExperienceItem {
-  id: number;
-  title: string;
-  institution: string;
-  period: string;
-  type: 'education' | 'certification';
-  description: string;
-  achievements: string[];
-  icon: React.ReactNode;
-}
 
 export default function Experience() {
   const experiences = [

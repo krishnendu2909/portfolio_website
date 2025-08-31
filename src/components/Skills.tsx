@@ -3,19 +3,13 @@
 import { motion } from "framer-motion";
 import { 
   FaPython, FaReact, FaNodeJs, FaAws, FaFigma, FaGitAlt, FaDocker,
-  FaJs, FaHtml5, FaCss3Alt, FaDatabase, FaCode, FaServer, FaTools
+  FaJs, FaHtml5, FaCss3Alt, FaDatabase, FaCode
 } from "react-icons/fa";
 import { 
   SiTypescript, SiMongodb, SiPostgresql, SiTailwindcss, SiNextdotjs,
   SiExpress, SiCplusplus, SiKubernetes, SiTensorflow
 } from "react-icons/si";
 
-interface Skill {
-  name: string;
-  icon: React.ReactNode;
-  level: 'Beginner' | 'Intermediate' | 'Advanced';
-  category: string;
-}
 
 export default function Skills() {
   const skillCategories = {
@@ -53,23 +47,6 @@ export default function Skills() {
     ]
   };
 
-  const getLevelColor = (level: string) => {
-    switch (level) {
-      case 'Beginner': return 'var(--theme-accent)';
-      case 'Intermediate': return 'var(--theme-secondary)';
-      case 'Advanced': return 'var(--theme-primary)';
-      default: return 'var(--theme-primary)';
-    }
-  };
-
-  const getLevelWidth = (level: string) => {
-    switch (level) {
-      case 'Beginner': return '40%';
-      case 'Intermediate': return '70%';
-      case 'Advanced': return '90%';
-      default: return '50%';
-    }
-  };
 
   return (
     <section id="skills" className="py-20 text-themeText bg-themeBackground">

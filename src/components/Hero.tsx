@@ -1,7 +1,6 @@
 // components/Hero.tsx
 "use client";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from "react-icons/fa";
 import AnimatedAvatar from "./AnimatedAvatar";
 import BackgroundAsteroids from "./BackgroundAsteroids";
 import LavaTagline from "./LavaTagline";

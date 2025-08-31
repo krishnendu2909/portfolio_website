@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from 'react';
-import { useTheme } from '../contexts/ThemeContext';
 
 export default function ThemeTransition() {
   useEffect(() => {
